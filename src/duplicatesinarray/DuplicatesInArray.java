@@ -14,8 +14,6 @@ import java.util.ArrayList;
  */
 public class DuplicatesInArray 
 {
-    private static Object ArrayUtils;
-
     /**
      * @param args the command line arguments
      */
@@ -24,8 +22,10 @@ public class DuplicatesInArray
         int[] arr = {1,1,2,2};
         ArrayList<Integer> duplicates = findDuplicates(arr);
         
-        for (int i : duplicates)
+        duplicates.stream().forEach((i) -> 
+        {
             System.out.print(i+", ");
+        });
     }
     
     private static ArrayList<Integer> findDuplicates(int[] arr)
